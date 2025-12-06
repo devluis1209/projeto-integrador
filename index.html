@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Definição de metadados básicos da página -->
+    <meta charset="UTF-8"> <!-- Codificação de caracteres para português -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade para dispositivos móveis -->
+    <title>Projeto Integrador - Login</title> <!-- Título que aparece na aba do navegador -->
+    
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Container principal que envolve todo o conteúdo do login -->
+    <div class="login-container">
+        
+        <!-- Seção do logo e título do projeto -->
+        <div class="logo-area">
+            <h1 class="logo-title">Associação Comunitária Itaqui Bacanga</h1> <!-- Título principal -->
+            <p class="logo-subtitle">Sejam Bem Vindos!</p> <!-- Subtítulo -->
+        </div>
+
+        <!-- Formulário de login com ID para manipulação via JavaScript -->
+        <form class="login-form" id="loginForm">
+            
+            <!-- Grupo do campo de e-mail -->
+            <div class="form-group">
+                <label for="email">E-mail</label> <!-- Rótulo acessível para o campo -->
+                <input type="email" id="email" class="form-control" placeholder="seu.email@exemplo.com" required>
+                <!-- Campo de entrada para e-mail com validação nativa do HTML5 -->
+            </div>
+
+            <!-- Grupo do campo de senha -->
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <div class="password-container"> <!-- Container especial para senha com botão de visualização -->
+                    <input type="password" id="password" class="form-control" placeholder="Digite sua senha" required>
+                    <!-- Botão para alternar entre mostrar/ocultar a senha -->
+                    <button type="button" class="toggle-password" id="togglePassword">Mostrar</button>
+                </div>
+            </div>
+
+            <!-- Botão de submissão do formulário -->
+            <button type="submit" class="login-btn">Entrar</button>
+
+            <!-- Link para recuperação de senha -->
+            <div class="forgot-password">
+                <a href="#" id="forgotPasswordLink">Esqueceu sua senha?</a>
+            </div>
+        </form>
+
+        <!-- Seção de informações sobre o projeto -->
+        <div class="project-info">
+            <p><strong>Projeto Integrador Comunitário:</strong> Tecnologia que Transforma</p>
+            <p>Sistema de gestão para associações comunitárias</p>
+            
+            <!-- Logos ou nomes das instituições envolvidas -->
+            <div class="footer-logos">
+                <span>SOFTEX</span>
+                <span>PERNAMBUCO</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link para o arquivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>

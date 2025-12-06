@@ -1,0 +1,191 @@
+/* Reset básico para remover margens e paddings padrão dos navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Faz com que padding e border sejam incluídos no tamanho total dos elementos */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte padrão para toda a página */
+}
+
+/* Estilos do corpo da página */
+body {
+    background-color: #003049; /* Cor de fundo azul escuro (cor principal do projeto) */
+    color: white; /* Cor do texto padrão */
+    min-height: 100vh; /* Garante que o body ocupe pelo menos 100% da altura da tela */
+    display: flex; /* Usa flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 20px; /* Espaçamento interno para evitar que o conteúdo encoste nas bordas em telas pequenas */
+}
+
+/* Container principal do formulário de login */
+.login-container {
+    background-color: white; /* Fundo branco para contraste com o fundo azul */
+    color: #003049; /* Texto na cor principal do projeto */
+    border-radius: 20px; /* Bordas arredondadas para um visual mais suave */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
+    width: 100%;
+    max-width: 420px; /* Largura máxima para desktop */
+    padding: 40px 35px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto dentro do container */
+}
+
+/* Área do logo e título */
+.logo-area {
+    margin-bottom: 30px; /* Espaçamento abaixo do logo */
+}
+
+/* Estilo do título principal */
+.logo-title {
+    font-size: 28px;
+    font-weight: 700; /* Negrito */
+    margin-bottom: 8px; /* Espaçamento abaixo do título */
+    color: #003049; /* Cor do texto */
+}
+
+/* Estilo do subtítulo */
+.logo-subtitle {
+    font-size: 16px;
+    color: #5a7a9c; /* Cor cinza azulada mais clara */
+    font-weight: 500; /* Peso médio da fonte */
+}
+
+/* Container do formulário */
+.login-form {
+    display: flex; /* Usa flexbox para organizar os elementos */
+    flex-direction: column; /* Coloca os elementos em coluna (um abaixo do outro) */
+    gap: 20px; /* Espaçamento entre os elementos filhos */
+}
+
+/* Estilo de cada grupo de campo do formulário */
+.form-group {
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Estilo dos rótulos dos campos */
+.form-group label {
+    display: block; /* Faz com que o label ocupe toda a largura */
+    margin-bottom: 8px; /* Espaçamento abaixo do label */
+    font-weight: 600; /* Semi-negrito */
+    font-size: 15px;
+    color: #003049; /* Cor do texto */
+}
+
+/* Estilo dos campos de entrada (inputs) */
+.form-control {
+    width: 100%; /* Ocupa 100% da largura disponível */
+    padding: 15px; /* Espaçamento interno */
+    border: 2px solid #e0e6ef; /* Borda cinza clara */
+    border-radius: 10px; /* Bordas levemente arredondadas */
+    font-size: 16px;
+    transition: all 0.3s; /* Transição suave para efeitos de hover/focus */
+    background-color: #f8fafc; /* Cor de fundo cinza muito claro */
+    color: #003049; /* Cor do texto digitado */
+}
+
+/* Estilo quando o campo de entrada está focado (clicado) */
+.form-control:focus {
+    outline: none; /* Remove o contorno padrão do navegador */
+    border-color: #003049; /* Muda a borda para a cor principal */
+    background-color: white; /* Muda o fundo para branco puro */
+    box-shadow: 0 0 0 3px rgba(0, 48, 73, 0.1); /* Adiciona um efeito de sombra ao redor */
+}
+
+/* Container especial para o campo de senha (para posicionar o botão de visualização) */
+.password-container {
+    position: relative; /* Permite posicionar elementos filhos de forma absoluta em relação a este container */
+}
+
+/* Botão para mostrar/ocultar a senha */
+.toggle-password {
+    position: absolute; /* Posiciona o botão dentro do container de senha */
+    right: 15px; /* Distância da borda direita */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajuste fino para centralização perfeita */
+    background: none; /* Remove fundo padrão do botão */
+    border: none; /* Remove borda padrão do botão */
+    color: #5a7a9c; /* Cor do texto do botão */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    font-size: 14px;
+}
+
+/* Estilo do botão de login */
+.login-btn {
+    background-color: #003049; /* Cor de fundo azul escuro */
+    color: white; /* Texto branco */
+    border: none; /* Remove borda padrão */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 16px; /* Espaçamento interno */
+    font-size: 17px;
+    font-weight: 600; /* Negrito */
+    cursor: pointer; /* Indica que é clicável */
+    transition: all 0.3s; /* Transição suave para efeitos de hover */
+    margin-top: 10px; /* Espaçamento acima do botão */
+}
+
+/* Efeito quando o mouse passa sobre o botão de login */
+.login-btn:hover {
+    background-color: #002437; /* Cor mais escura para o efeito hover */
+    transform: translateY(-2px); /* Move o botão levemente para cima */
+    box-shadow: 0 7px 14px rgba(0, 48, 73, 0.2); /* Adiciona sombra para efeito de elevação */
+}
+
+/* Container do link "esqueceu sua senha" */
+.forgot-password {
+    text-align: center; /* Centraliza o texto */
+    margin-top: 15px; /* Espaçamento acima */
+}
+
+/* Estilo do link de recuperação de senha */
+.forgot-password a {
+    color: #5a7a9c; /* Cor cinza azulada */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    font-size: 15px;
+    transition: color 0.3s; /* Transição suave para mudança de cor */
+}
+
+/* Efeito quando o mouse passa sobre o link */
+.forgot-password a:hover {
+    color: #003049; /* Muda para a cor principal */
+    text-decoration: underline; /* Adiciona sublinhado */
+}
+
+/* Seção de informações sobre o projeto */
+.project-info {
+    margin-top: 30px; /* Espaçamento acima */
+    padding-top: 20px; /* Espaçamento interno no topo */
+    border-top: 1px solid #e0e6ef; /* Linha divisória cinza clara */
+    color: #5a7a9c; /* Cor do texto */
+    font-size: 14px; /* Tamanho de fonte menor */
+}
+
+/* Estilo dos parágrafos dentro da seção de informações */
+.project-info p {
+    margin-bottom: 5px; /* Espaçamento abaixo de cada parágrafo */
+}
+
+/* Container para os logos das instituições */
+.footer-logos {
+    display: flex; /* Usa flexbox para organizar os logos lado a lado */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 15px; /* Espaçamento entre os logos */
+    margin-top: 20px; /* Espaçamento acima */
+    flex-wrap: wrap; /* Permite que os logos quebrem para a linha seguinte em telas pequenas */
+}
+
+/* Estilo de cada logo (representado por um span neste exemplo) */
+.footer-logos span {
+    font-weight: 600; /* Negrito */
+    color: #003049; /* Cor principal */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+/* Media query para telas pequenas (celulares) */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 30px 25px; /* Reduz o padding em telas pequenas */
+    }
+    
+    .logo-title {
+        font-size: 24px; /* Reduz o tamanho da fonte do título em telas pequenas */
+    }
+}
